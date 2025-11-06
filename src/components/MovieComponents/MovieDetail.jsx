@@ -105,7 +105,7 @@ export const MovieDetail = ({
                 className="flex items-center gap-2 text-yellow-400 text-lg"
               >
                 <img
-                  src="/src/assets/imdb-logo.png"
+                  src="/imdb-logo.png"
                   alt="IMDb logo"
                   className="h-10"
                 />
