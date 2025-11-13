@@ -22,6 +22,18 @@ export async function getMovieById(id) {
   }
 }
 
+export async function getMoviesByQuery(query) {
+  try {
+    const res = await axios.get(`${API_BASE_URL}movies/search`, {
+      params: { query }
+    });
+    return res.data?.slice(0, 6) || [];
+  } catch (error) {
+    console.error("Error in getMoviesByQuery:", error);
+    throw error;
+  }
+}
+
 export async function getMoviesByCategory(category, page) {
   try {
     const res = await axios.get(`${API_BASE_URL}movies/${category}`, {
